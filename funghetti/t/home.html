@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>HOME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<head>
+<style>
+body{
+  background: #ffffff;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: trasparent;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+p {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 10px;
+  font-style: normal;
+}
+.titolo {
+  font-size: 25px;
+}
+#contorno{
+  border: 2px solid #ffffff;
+  padding: 3px;
+  border-radius: 25px;
+}
+#sentiero{
+  border: 2px solid #D9D7F1;
+  padding: 3px;
+  border-radius: 25px;
+  background: #D9D7F1;
+}
+#altare{
+  border: 2px solid #B0D9D9;
+  padding: 3px;
+  border-radius: 25px;
+  background: #B0D9D9;
+}
+.w3-card-4 {
+  box-shadow: 0 4px 8px 0 rgba(153, 147, 144), 0 6px 20px 0 rgba(153, 147, 144);
+}
+.w3-card-4:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#foto{
+  border: 2px solid trasparent;
+  padding: 1px;
+  border-radius: 25px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.left{
+  background-color: white;
+  color: black;
+  border: 3px solid #07418C;
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 10px;
+}
+.left:hover{
+  border: 2px solid #011742;
+}
+.right{
+  background-color: white;
+  color: black;
+  border: 3px solid #06C9D4;
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 10px;
+
+}
+.right:hover{
+  border: 2px solid #04777D;
+}
+.monument{
+  float: left;
+}
+.free{
+  float: right;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.titlem{
+  color: #228B22;
+  font-family: 'Indie Flower', cursive;
+}
+.pm{
+  font-family: 'Indie Flower', cursive;
+}
+#header {
+   background: transparent;
+   padding:15px;
+   text-align: right;
+}
+.au{
+  font-size: 20px;
+  text-decoration: none;
+}
+.au:hover {
+  text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+<div id="header"><a class="au" href="aboutus.html">About us</a></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center><div class="w3-card-4" id="altare" style="width:75%">
+    <img src="../photos/photo-2.png" alt="Alps" style="width:100%" id="foto">
+    <div class="w3-container w3-center">
+      <p><img src="../src/monument.png" width="45%" class="monument"><img src="../src/free.png" width="45%" class="free"><br><br></p>
+      <p class="titolo">Altare della patria</p>
+      <p> Un ricordo degli innumerevoli morti che morirono durante la Grande Guerra che rimasero senza sepoltura. </p>
+     <a class="left" style="background: #B0D9D9;" href="vittoriano.php"> Maggiori info </a> <a class="right" style="background: #B0D9D9;"> Trova percorso </a>
+     <br></br><br></br><br></div>
+  </div></center><br></br><br>
+  <center><div class="w3-card-4" id="sentiero" style="width:75%">
+    <img src="../photos/photo-1.png" alt="Alps" style="width:100%" id="foto">
+    <div class="w3-container w3-center">
+      <p><img src="../src/nature.png" width="45%" class="monument"><img src="../src/free.png" width="45%" class="free"><br><br></p>
+      <p class="titolo">Sentiero pasolini</p>
+      <p> Sull'argine della sponda che da&grave; verso Ostia, e&grave; stato aperto un sentiero per bici e pedoni.</p>
+     <a class="left" style="background: #D9D7F1;" href="sentiero.php"> Maggiori info </a> <a class="right" style="background: #D9D7F1;"> Trova percorso </a>
+     <br><br/><br><br><br></div>
+  </div></center><br></br><br>
+  <center><div class="w3-card-4" id="contorno" style="width:75%">
+    <img src="../photos/photo-1.png" alt="Alps" style="width:100%" id="foto">
+    <div class="w3-container w3-center">
+      <p class="titolo">Sentiero pasolini</p>
+      <p> Descizione ... </p>
+     <a class="left"> Maggiori info </a> <a class="right"> Trova percorso </a>
+     <br></br><br></br><br></div>
+  </div></center><br></br><br>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 class="titlem">Vuoi fare la differenza?</h1>
+    <br> <p class="pm">Se sei ammaliato dal verde, dalla tranquillita&grave; e dalla pace devi assolutamente fare qualcosa!! </p>
+    <p class="pm">La deforestazione in luoghi come l'amazzonia e&grave; aumentata del 20% nell'ultimo anno, e questo ricade non solo sulle migliaglia di specie che abitano la foresta, ma anche su noi esseri umani. Per fortuna esistono delle associazioni come Treedom che piantano alberi a distanza cosi&grave; da dare lavoro a persone del posto ma anche l'ossigeno per tutto il mondo.</p>
+    <p class="pm"> Dalla creazione Treedom ha piantato oltre 300 000 000 di alberi, ma e&grave; solo l'inzio, grazie a te potra&grave; aiutare ancora molti paesi, e piantare ancora piu&grave; alberi! Clicca sul logo per saperne di piu&grave;.</p>
+    <a href="https://www.treedom.net/it/plant-a-tree?gclid=Cj0KCQjwm6KUBhC3ARIsACIwxBjV4NHZlJ3J37DQrhQyA_NFpPlace8tlpbEqEiUwRC99nyxwbhZ2X4aArE2EALw_wcB"><img src="../src/treedom.gif"></a>
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+function myFunction() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+window.addEventListener("load", function(){
+    myFunction()
+});
+</script>
+</body>
+</html>

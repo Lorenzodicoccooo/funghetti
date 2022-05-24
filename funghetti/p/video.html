@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: #FFFFFF;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
+</head>
+<body>
+
+<video width="100%" autoplay loop muted id="myVideo">
+  <source src="../src/bg.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<script>
+  setTimeout(function(){
+    window.location.href = './main.html';
+  }, 5000);
+</script>
+
+<script>
+  window.onload = function() {
+    setTimeout();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('../photos/bg4.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    h1 {
+      color: white;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 160px;
+
+    }
+    p {
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 36px;
+      font-style: normal;
+
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover{
+      width: 100px;
+    }
+    .square {
+      height: 2px;
+      width: 100px;
+      background-color: white;
+    }
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .logo {
+      margin: 0;
+      position: absolute;
+      top: 5%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  height: 100vh
+}
+
+.title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+ <div class="logo"><img src="../src/logo1.png" width="600px"></div>
+ <div class="vertical-center">
+  <h2 class="title">
+    <span class="title-word title-word-1">Fa che </span>
+    <span class="title-word title-word-2">questo sito </span>
+    <span class="title-word title-word-3">funga da </span>
+    <span class="title-word title-word-4">tua guida!</span>
+  </h2>
+  <div id="demo-1"><a href="home.html"> <div id="a"><p id="scopri"> Scopri di piu&grave; </div></p>
+ <div class="square" id="demo2"></div></a></div>
+</div>
+
+<script>
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+</script>
+<script>
+function settaSfondi() {
+  var a = "../photos/bg.jpg";
+  var b = "../photos/bg2.jpg";
+  var c = "../photos/bg3.jpg";
+  var foto = "";
+
+  var i = 1;
+setTimeout(function(){
+    while (i < 3) {
+          if (i == 1) {
+            foto = a;
+        	   document.body.style.backgroundImage = "url(" + foto + ")";
+           } else if (i == 2) {
+            foto = b;
+            setTimeout(function(){
+          	  document.body.style.backgroundImage = "url(" + foto + ")";
+            },4000);
+          }
+        i++
+    };
+    if (i == 3){
+      setTimeout(function(){
+        foto = c;
+        document.body.style.backgroundImage = "url(" + foto + ")";
+        settaSfondi()
+      },8000);
+      i = 1
+    }
+},4000);
+}
+</script>
+
+<script>
+document.getElementById("demo-1").addEventListener("mouseover", mouseOver);
+document.getElementById("demo-1").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementById("demo2").style.width = "125px";
+  document.getElementById("scopri").style.fontStyle = "italic";
+}
+
+function mouseOut() {
+  document.getElementById("demo2").style.width = "100px";
+  document.getElementById("scopri").style.fontStyle = "normal";
+}
+</script>
+
+<script>
+//Attiva la funzione typeWriter e cambiaSfondo quando la pagina si è caricata
+window.onload = function() {
+  typeWriter();
+  settaSfondi();
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('../photos/bg4.jpg');
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    h1 {
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 60px;
+      line-height: 0%;
+
+    }
+    p {
+      color: white;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover{
+      width: 100px;
+    }
+    .square {
+      height: 2px;
+      width: 100px;
+      background-color: white;
+    }
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .logo {
+      margin: 0;
+      position: absolute;
+      top: 5%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .ml16 {
+      color: white;
+      padding: 50px 0;
+      font-weight: 800;
+      font-size: 40px;
+      letter-spacing: 0.3em;
+      font-family: 'Ubuntu', sans-serif;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+
+    .ml16 .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
+    </style>
+</head>
+<body>
+ <div class="logo"><img src="../src/logo1.png" width="300px"></div>
+ <div class="vertical-center">
+   <h1 class="ml16">Lascia che questo sito ti funga da guida!</h1>
+  <div id="demo-1"><a href="home.html"> <div id="a"><p id="scopri"> Scopri di piu&grave; </div></p>
+ <div class="square" id="demo2"></div></a></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 2000,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+<script>
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+</script>
+<script>
+function settaSfondi() {
+  var a = "../photos/bg.jpg";
+  var b = "../photos/bg2.jpg";
+  var c = "../photos/bg3.jpg";
+  var foto = "";
+
+  var i = 1;
+setTimeout(function(){
+    while (i < 3) {
+          if (i == 1) {
+            foto = a;
+        	   document.body.style.backgroundImage = "url(" + foto + ")";
+           } else if (i == 2) {
+            foto = b;
+            setTimeout(function(){
+          	  document.body.style.backgroundImage = "url(" + foto + ")";
+            },4000);
+          }
+        i++
+    };
+    if (i == 3){
+      setTimeout(function(){
+        foto = c;
+        document.body.style.backgroundImage = "url(" + foto + ")";
+        settaSfondi()
+      },8000);
+      i = 1
+    }
+},4000);
+}
+</script>
+
+<script>
+document.getElementById("demo-1").addEventListener("mouseover", mouseOver);
+document.getElementById("demo-1").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementById("demo2").style.width = "175px";
+  document.getElementById("scopri").style.fontStyle = "italic";
+  document.getElementById("scopri").style.letterSpacing = "5px";
+}
+
+function mouseOut() {
+  document.getElementById("demo2").style.width = "100px";
+  document.getElementById("scopri").style.fontStyle = "normal";
+  document.getElementById("scopri").style.letterSpacing = "1px";
+}
+</script>
+
+<script>
+//Attiva la funzione typeWriter e cambiaSfondo quando la pagina si è caricata
+window.onload = function() {
+  settaSfondi();
+};
+</script>
+
+</body>
+</html>

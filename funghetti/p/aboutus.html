@@ -1,0 +1,119 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body{
+    background-color: #FAF0D7;
+  }
+  .title{
+    font-size: 100px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    transform: translateY(-50%);
+  }
+  .su{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    line-height: 0.1;
+    transform: translateY(-5500%);
+  }
+  h2{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 45px;
+  }
+  h3{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+  }
+  #info {
+    position:fixed;
+    width:100%;
+    height:100px;
+    margin-left:-50%;
+    background:#063;
+    bottom:0px;
+    left:50%;
+  }
+  .funghetto{
+    margin-left: 2%;
+    transform: translateX(0%);
+    animation: slidein 13s infinite;
+  }
+  @keyframes slidein {
+    from {
+      transform: translateX(-110%);
+    }
+
+    to {
+      transform: translateX(500%);
+    }
+  }
+  .au{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .au:hover {
+  text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <a class="au" href="home.html" >Torna indietro</a>
+  <h1 class="title"> About Us </h1>
+  <p class="su"> Vai giu&grave; </p>
+  <h2 id="yy" style="position:fixed"> La nostra storia: </h2>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 id="yy2" style="position:fixed"> </h3>
+  <article style="height: 10000px">
+  </article>
+  <div id="info"> <a href="http://telegram.me/Walkingmushroom_BOT"><img src="../src/logo2.png" width="210px" class="funghetto"></a>  </div>
+<script>
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 0) {
+            $("#yy").text("La nostra storia:")
+            $("#yy2").text("")
+            if ($(this).scrollTop() > 100) {
+              $("#yy").text("Cos'\u00E8 Walkingmushroom?")
+              $("#yy2").text("Un'app dove ogni monumento ha il proprio account e dove la gente come se fosse su insta ha la possibilit\u00E0 di mettere like e lasciare un commento!")
+              if ($(this).scrollTop() > 300) {
+                 $("#yy2").text("Un'app che attraverso il 3D non solo ti permette di capire come un tempo era un monumento, ma ha integrata una mini guida robottino di Star Wars che ti spiega tutto!")
+                 if ($(this).scrollTop() > 500) {
+                    $("#yy2").text("Un'app che permette attraverso un algortimo di trovare il miglior monumento per te al minor prezzo possibile!")
+                    if ($(this).scrollTop() > 700) {
+                       $("#yy2").text("Un sito che permette a turisti e abitanti della nostra citt\u00E0 di conoscere anche i luoghi pi\u00F9 nascosti ma comunque bellissimi!")
+                       if ($(this).scrollTop() > 900) {
+                          $("#yy2").text("Un sito che attraverso un DATABASE permette agli utenti di lasciare un commento per descrivere la propria esperienza nel visitare uno dei monumenti o luoghi naturali che abbiamo selezionato accuratamete per lui!")
+                          if ($(this).scrollTop() > 1100) {
+                             $("#yy2").text("Un sito dove alcuni ragazzi di Ostia hanno selezionato i migliori luoghi da visitare anche se non presenti sui pi\u00F9 famosi siti per i viaggi. Un ragazzo che viene ad Ostia potr\u00E0 quindi trovare un luogo tranquillo per fare una passegiata, studiare o sentirsi un antico romano sotto nostro consiglio! Inoltre potr\u00E0 utlizzare alcuni filtri presenti nel sito per trovare il posto che lo aggrada di pi\u00F9!")
+                             if ($(this).scrollTop() > 1300) {
+                                $("#yy2").text("Ma pi\u00F9 di tutto Walkingmushroom \u00E8 il lavoro di 13 studenti di un liceo qualsiasi accomunati da unicamente dal professore di filosofia, che grazie all'aiuto di un fantastcio tutor e un professore con i fiocchi hanno potuto mettere a frutto le proprie idee! Ma questi semplici 13 ragazzi vi ricordano che per quanto meraviglisoi questi luoghi hanno bisogno proprio di voi per resistere al tempo, perci\u00F2 visitateli e parlatene ai vostri amici!")
+                             }
+                          }
+                       }
+                    }
+                 }
+              }
+            }
+      } else {
+            $("#yy2").text("")
+            $("#yy").text("La nostra storia:")
+        }
+    });
+});
+</script>
+</body>
+</html>
